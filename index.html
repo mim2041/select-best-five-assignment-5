@@ -170,7 +170,7 @@
                 
             </div>
             <div class="right-half text-white">
-                <div id="select-player">
+                <div id="show-select-player">
                   <h1 class="text-2xl text-white">Selected-V</h1>
                 <ol id="player-list">
 
@@ -181,7 +181,7 @@
                   <h1>Budget</h1>
                   <div class="budget-input-design">
                     <p>Per Player </p>
-                    <input class="p-1 w-1/2" type="text">
+                    <input id="per-player-field" class="p-1 w-1/2 text-black" type="text">
                   </div>
                   <button id="btn-calculate" class="bg-blue-600 px-5 py-2 mb-5 ">Calculate</button>
                   <p>Player Expenses $<span id="expense-amount"></span></p>
@@ -204,6 +204,8 @@
         </section>
     </main>
 
-    <script src="js/index.js"></script>
+    <!-- <script src="js/index.js"></script> -->
+    <script src="js/selectPlayer.js"></script>
+    <script src="js/calculation.js"></script>
 </body>
 </html>
