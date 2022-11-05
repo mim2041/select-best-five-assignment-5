@@ -33,11 +33,12 @@
 }
 
 .player-container{
-    background-color: white;
+    background-color: rgb(23, 20, 20);
     display: grid;
     grid-template-columns: 4fr 1fr;
     gap: 20px;
     padding: 0 50px;
+    padding-top: 50px;
 }
 .left-half{
     display: grid;
@@ -49,4 +50,29 @@
     display: flex;
     justify-content: space-between;
     margin:5px 30px;
+}
+
+.card{
+    border: 1px solid #413b3b;
+}
+
+.select-player{
+    border: 1px solid #413b3b;
+    text-align : center;
+    margin-top: 8px;
+    padding: 10px;
+    
+}
+
+.budget-div{
+    border: 1px solid #413b3b;
+    margin-top: 40px;
+    
+}
+
+.budget-input-design{
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    padding: 35px;
 }
