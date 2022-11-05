@@ -1,0 +1,52 @@
+.header-section{
+    background-color: black;
+    height: 481px;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: relative;
+   
+}
+
+.header-div{
+    
+}
+
+.title{
+    color: #FF5E19;
+    font-family: 'Berkshire Swash';
+    text-align: center;
+    font-size: 5rem;
+}
+
+.header-left-img{
+    position: relative;
+    height: 80%;
+    bottom:-48px;
+}
+
+.header-right-img{
+    position: relative;
+    top: -35px;
+    right: 60px;
+}
+
+.player-container{
+    background-color: white;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    gap: 20px;
+    padding: 0 50px;
+}
+.left-half{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 10px;
+}
+.player-info{
+    display: flex;
+    justify-content: space-between;
+    margin:5px 30px;
+}
