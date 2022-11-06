@@ -7,8 +7,18 @@ function playerNames(playerId){
 function addToList(playerName){
     const playerList = document.getElementById('player-list');
     const li = document.createElement('li');
-    li.innerText = playerNames(playerName);
-    playerList.appendChild(li);
+    
+    const list = playerList.querySelectorAll("li");
+    const noOfPlayer = list.length;
+    console.log(noOfPlayer);
+    if(noOfPlayer < 5){
+        playerList.appendChild(li);
+        li.innerText = playerNames(playerName);
+    }
+    else{
+        alert('You can not select more than 5 players');
+    }
+    
 }
 
 function selectPlayer(playerId, btnId){

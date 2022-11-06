@@ -39,6 +39,7 @@
     gap: 20px;
     padding: 0 50px;
     padding-top: 50px;
+    padding-bottom: 50px;
 }
 .left-half{
     display: grid;

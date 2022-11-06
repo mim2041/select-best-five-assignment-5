@@ -8,12 +8,7 @@ document.getElementById('btn-calculate').addEventListener('click',function(){
     const list = playerList.querySelectorAll("li");
     const noOfPlayer = list.length;
     
-    if(noOfPlayer<= 5){
-        const totalAmount = noOfPlayer * perPlayerAmount;
-    }
-    else{
-        alert('You can not select more than 5 players');
-    }
+    const totalAmount = noOfPlayer * perPlayerAmount;
 
     const expenseAmount = document.getElementById('expense-amount');
     expenseAmount.innerText = totalAmount;
