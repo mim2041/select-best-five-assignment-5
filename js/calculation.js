@@ -4,13 +4,30 @@ document.getElementById('btn-calculate').addEventListener('click',function(){
 
     const playerList = document.getElementById('player-list');
     const li = document.createElement('li');
-    playerList.appendChild(li);
+    // playerList.appendChild(li);
     const list = playerList.querySelectorAll("li");
     const noOfPlayer = list.length;
-    console.log(noOfPlayer);
-    const totalAmount = noOfPlayer * perPlayerAmount;
-    // console.log(totalAmount);
+    
+    if(noOfPlayer<= 5){
+        const totalAmount = noOfPlayer * perPlayerAmount;
+    }
+    else{
+        alert('You can not select more than 5 players');
+    }
 
     const expenseAmount = document.getElementById('expense-amount');
     expenseAmount.innerText = totalAmount;
+})
+
+document.getElementById('btn-calculate-total').addEventListener('click',function(){
+    const managerField = document.getElementById('manager-field');
+    const managerPrice = parseFloat(managerField.value);
+    const coachField = document.getElementById('coach-field');
+    const coachPrice = parseFloat(coachField.value);
+    const expenseAmount = document.getElementById('expense-amount');
+    const playerExpense = parseFloat(expenseAmount.innerText);
+
+    const total = managerPrice + coachPrice + playerExpense;
+    const totalAmountField = document.getElementById('total-amount');
+    totalAmountField.innerText = total;
 })
