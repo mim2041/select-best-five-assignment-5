@@ -1,35 +1,37 @@
-document.getElementById('select-player').addEventListener('click',function(event){
-    const selectButton = event.target;
-    
-    const playerList = document.getElementById('player-list');
-    const li = document.createElement('li');
-
-    li.innerText = playerNames('messi');
-    // selectButton = playerList.appendChild(li);
-    li.innerText = playerNames('neymar');
-    // selectButton = playerList.appendChild(li);
-    li.innerText = playerNames('mbappe');
-    li.innerText = playerNames('vitor');
-    li.innerText = playerNames('ramos');
-    li.innerText = playerNames('renato');
-    li.innerText = playerNames('messi1');
-    li.innerText = playerNames('neymar1');
-    li.innerText = playerNames('mbappe1');
-    li.innerText = playerNames('vitor1');
-    li.innerText = playerNames('ramos1');
-    li.innerText = playerNames('renato1');
-    // appendChildLi();
-    selectButton = playerList.appendChild(li);
-})
-
-function playerNames(playerId){
+function playersName(playerId){
     const playerIdField = document.getElementById(playerId);
-    const playerNames = playerIdField.innerText;
-
-    return playerNames;
+    const playerName = playerIdField.innerText;
+    return playerName;
 }
 
-function appendChildLi(){
-    
-    return playerList.appendChild(li);
+function btn(btnId, playerName){
+    document.getElementById(btnId).addEventListener('click',function(){
+        const playerList = document.getElementById('player-list');
+        const li = document.createElement('li');
+
+        const list = document.querySelectorAll('li');
+        const length = list.length;
+        console.log(length);
+        if(length < 5){
+            playerList.appendChild(li);
+            li.innerText = playersName(playerName);
+        }
+        else{
+            alert('You can not select more than 5 players');
+        }
+    })
 }
+
+btn('btn-messi','messi');
+btn('btn-neymar','neymar');
+btn('btn-mbappe','mbappe');
+btn('btn-vitor','vitor');
+btn('btn-ramos','ramos');
+btn('btn-renato', 'renato');
+
+btn('btn-messi1','messi1');
+btn('btn-neymar1','neymar1');
+btn('btn-mbappe1','mbappe1');
+btn('btn-vitor1','vitor1');
+btn('btn-ramos1','ramos1');
+btn('btn-renato1', 'renato1');
